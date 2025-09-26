@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/app.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/about.css" />
   </head>
 
   <body>
@@ -18,6 +19,7 @@
       <ul class="nav-links">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">About Me</a></li>
+        <li><a href="#contacts">Contact Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
@@ -33,7 +35,7 @@
         
         <div class="header-text">
           <h1>Hello, I am George </h1>
-          <p>Frontend Developer / FullStack Developer</p>
+          <p>Frontend Developer</p>
         </div>
 
         <div class="header-description">
@@ -50,7 +52,7 @@
     <section id="about">
       <h2>About Me</h2>
 
-      <p>
+      <p class="paragraph-description">
         Hello! I am George, 18 years old and currently in my final year of high
         school. I am passionate about web development, focusing on both
         <strong>Frontend</strong> and <strong>FullStack</strong> projects. I am
@@ -61,30 +63,23 @@
         responsive web applications.
       </p>
 
-      <div class="contacts">
-        <p><strong>Name:</strong> George Gulubov</p>
+      <div id="contacts">
+        <div class="contact-row">
+          <div><strong>Name:</strong> George Gulubov</div>
+          <div><strong>Email:</strong> <a href="mailto:gulubovgeorge@gmail.com">gulubovgeorge@gmail.com</a></div>
+        </div>
 
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:gulubovgeorge@gmail.com">gulubovgeorge@gmail.com</a>
-        </p>
-
-        <p><strong>Phone:</strong> +359 89 848 2930</p>
-
-        <p>
-          <strong>LinkedIn:</strong>
-          <a
-            href="https://www.linkedin.com/in/george-gulubov-415466332/"
-            target="_blank"
-            >LinkedIn</a
-          >
-        </p>
+        <div class="contact-row">
+          <div><strong>Phone:</strong> +359 89 848 2930</div>
+          <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/george-gulubov-415466332/" target="_blank">LinkedIn</a></div>
+        </div>
 
         <div class="actions">
           <button id="contact-me">Contact Me</button>
           <button id="cv">Download CV</button>
         </div>
       </div>
+
     </section>
 
     <!-- SKILLS SECTION -->

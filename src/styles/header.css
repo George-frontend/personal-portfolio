@@ -2,9 +2,9 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap:20px;
+    gap: 50px;
     max-width: 800px;
-    margin:20px auto;
+    margin: 80px auto;
 }
 
 .header-photo {
@@ -13,7 +13,7 @@ header {
 }
 
 .header-photo img {
-    width: 250px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -32,10 +32,20 @@ header {
     max-width: 400px;
 }
 
+.header-text p {
+    border: 2px solid red;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
 .header-description {
     font-size: 20x;
     line-height: 1.5;
     max-width: 400px;
+    display: block;
+    text-align: center;
 }
 
 .header-description h2 {
