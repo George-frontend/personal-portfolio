@@ -1,117 +1,143 @@
-/* ================= GLOBAL ================= */
-* {
+/* ================= Global ================= */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
-    line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= Navbar ================= */
 .navbar {
     display: flex;
     justify-content: center;
-    padding: 15px;
     background-color: black;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 10px 0;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: white;
-    font-weight: 500;
-    transition: color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .nav-links a:hover {
-    color: #feb47b;
+    color: red;
 }
 
-/* ================= HEADER ================= */
+/* ================= Header ================= */
 #header {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding: 50px;
-    flex-wrap: wrap;
-    text-align: center;
+    gap: 30px;
+    padding: 50px 20px;
+    text-align: left;
 }
 
 .header-photo img {
     width: 250px;
-    height: 250px;
-    object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #fff;
 }
 
 .header-right h1 {
+    margin: 0;
     font-size: 36px;
 }
 
 .header-right p {
-    font-size: 20px;
-    color: #feb47b;
+    font-size: 24px;
 }
 
-.header-description {
-    max-width: 600px;
-}
-
-/* ================= ABOUT ================= */
+/* ================= About ================= */
 #about {
-    padding: 50px 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.paragraph-description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ================= Skills ================= */
+#skills {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.list-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ================= Projects ================= */
+#projects {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
     text-align: center;
 }
 
-#about h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.projects-container1,
+.projects-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-#about .paragraph-description {
-    max-width: 700px;
-    margin: 0 auto;
+.project-card {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 340px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card h3 {
+    margin: 5px 0;
     font-size: 16px;
 }
 
-/* ================= SKILLS ================= */
-#skills {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#skills h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-/* ================= PROJECTS ================= */
-/* Use the previous responsive projects CSS you already have */
-
-/* ================= CONTACT ================= */
+/* ================= Contact ================= */
 #contacts {
     border-radius: 7px;
-    padding: 40px;
+    padding: 40px 20px;
     max-width: 600px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     background-color: black;
 }
 
@@ -122,35 +148,10 @@ body {
     padding: 10px 15px;
     background: white;
     border-radius: 8px;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-row:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.actions button {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
     font-size: 18px;
-    cursor: pointer;
 }
 
-.actions button:hover {
-    background-color: red;
-}
-
-/* ================= FOOTER ================= */
+/* ================= Footer ================= */
 #footer {
     text-align: center;
     padding: 20px;
@@ -158,105 +159,70 @@ body {
     color: white;
 }
 
-/* ================= MEDIA QUERIES ================= */
+/* ================= Media Queries ================= */
 
-/* Large tablets */
-@media (max-width: 992px) {
+/* ===== Tablet: 768px and below ===== */
+@media screen and (max-width: 768px) {
     #header {
-        gap: 30px;
-        padding: 40px;
+        flex-direction: column;
+        text-align: center;
     }
 
     .header-photo img {
         width: 200px;
-        height: 200px;
     }
 
     .header-right h1 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .header-right p {
+        font-size: 20px;
+    }
+
+    .projects-container1,
+    .projects-container2 {
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 280px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ===== Mobile: 480px and below ===== */
+@media screen and (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #header {
+        padding: 30px 10px;
+    }
+
+    .header-photo img {
+        width: 150px;
+    }
+
+    .header-right h1 {
+        font-size: 24px;
     }
 
     .header-right p {
         font-size: 18px;
     }
 
-    #about h2,
-    #skills h2 {
-        font-size: 24px;
-    }
-
-    #about .paragraph-description {
-        font-size: 15px;
-    }
-}
-
-/* Tablets and large phones */
-@media (max-width: 768px) {
-    #header {
-        flex-direction: column;
-    }
-
-    .projects-container1,
-    .projects-container2 {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .project-card {
-        width: 70%;
-    }
-
-    #about .paragraph-description,
-    .header-description p {
-        font-size: 14px;
-    }
-
-    .actions button {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #header h1 {
-        font-size: 24px;
-    }
-
-    #header p {
-        font-size: 16px;
-    }
-
-    #about h2,
-    #skills h2 {
-        font-size: 22px;
-    }
-
-    #about .paragraph-description {
-        font-size: 13px;
+    #about, #skills, #contacts {
+        padding: 0 10px;
     }
 
     .project-card {
         width: 90%;
-        min-height: 250px;
-    }
-
-    .actions button {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-
-    #contacts {
-        padding: 30px 15px;
-        gap: 30px;
     }
 }
