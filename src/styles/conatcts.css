@@ -121,23 +121,23 @@
 #toast {
   visibility: hidden;                /* Hidden by default */
   min-width: 250px;                  /* Minimum width */
-  margin-left: -125px;               /* Center horizontally */
-  background-color: #2ecc71;         /* Green background for success */
+  background-color: #d81111;         /* Green background for success */
   color: white;                      /* Text color */
   text-align: center;                /* Centered text */
   border-radius: 8px;                /* Rounded corners */
   padding: 16px;                     /* Inner spacing */
   position: fixed;                   /* Fixed position on screen */
   z-index: 9999;                     /* Stay above everything */
-  left: 50%;                         /* Center horizontally */
-  bottom: 30px;                      /* Position above bottom */
+  top: 20px;                         /* Distance from top */
+  right: 20px;                       /* Distance from right */
   font-size: 14px;                   /* Text size */
   opacity: 0;                        /* Start invisible */
-  transition: opacity 0.5s, bottom 0.5s; /* Smooth animation */
+  transition: opacity 0.5s, transform 0.5s; /* Smooth fade + slide */
+  transform: translateY(-20px);      /* Start slightly higher */
 }
 
 #toast.show {
   visibility: visible;               /* Make visible */
   opacity: 1;                        /* Fade in */
-  bottom: 50px;                      /* Move up slightly */
+  transform: translateY(0);          /* Slide down into view */
 }

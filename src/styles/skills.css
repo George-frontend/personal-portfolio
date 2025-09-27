@@ -23,6 +23,9 @@
     line-height: 1;                 /* Compact line spacing */
 }
 
+
+
+/* ================= Skills List ================= */
 .list-skills {
     display: flex;                  /* Flexbox for the skill list */
     flex-direction: column;         /* Stack skill items vertically */
@@ -31,12 +34,14 @@
     list-style: none;               /* Remove default list bullets */
 }
 
+/* Each individual skill item */
 .skill-item {
     display: flex;                  /* Flexbox for icon, text, and bar */
     align-items: center;            /* Align items vertically centered */
     gap: 10px;                      /* Space between icon, text, and bar */
 }
 
+/* Skill icons */
 .skill-icon {
     width: 35px;                    /* Icon size */
     height: 35px;
@@ -47,6 +52,7 @@
     filter: invert(100%);           /* Invert GitHub icon for dark mode */
 }
 
+/* Skill name text */
 .skill-name {
     width: 120px;                   /* Fixed width for skill name */
     color: white;                   /* Text color */
@@ -54,6 +60,7 @@
     text-align: left;               /* Align text to the left */
 }
 
+/* Skill bar container */
 .skill-bar {
     width: 100%;                    /* Take remaining available space */
     max-width: 450px;               /* Prevent it from getting too wide */
@@ -65,6 +72,7 @@
     margin-right: auto;
 }
 
+/* Actual progress fill */
 .skill-level {
     width: 0%;                      /* Animated width (to be set dynamically) */
     height: 100%;                   /* Fill skill-bar height */
@@ -78,9 +86,34 @@
     font-weight: bold;              /* Bold percentage text */
     font-size: 12px;                /* Font size for percentage */
     transition: width 1.5s ease-in-out; /* Smooth animation when filling */
+    position: relative;             /* Needed for wave overlay */
+    overflow: hidden;               /* Hide wave overflow */
 }
 
+/* Percentage text inside the bar */
 .skill-percent {
     color: white;                   /* Percentage color */
     font-size: 12px;                /* Percentage font size */
+}
+
+/* ================= Wave Animation Overlay ================= */
+
+/* Pseudo-element for wave effect */
+.skill-level::before {
+    content: '';                      /* Empty content */
+    position: absolute;               /* Absolute inside skill-level */
+    top: 0;
+    left: -100%;                      /* Start off-screen left */
+    width: 100%;                      /* Full width */
+    height: 100%;                     /* Full height of skill bar */
+    background: rgba(255,255,255,0.3); /* Semi-transparent white wave */
+    transform: skewX(-20deg);         /* Angled wave look */
+    animation: wave 6s linear infinite; /* Continuous movement */
+    border-radius: 6px;               /* Match bar rounding */
+}
+
+/* Keyframes for moving wave left to right */
+@keyframes wave {
+    0% { left: -100%; }               /* Start off-screen left */
+    100% { left: 100%; }              /* Move fully to right */
 }
