@@ -1,56 +1,52 @@
+/* ================= HEADER ================= */
 header {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 50px;
-    max-width: 800px;
-    margin: 80px auto;
-}
-
-.header-photo {
-    display: flex;
-    justify-content: flex-start;
+    display: flex;                       /* Use flexbox for layout */
+    align-items: center;                 /* Vertically align content */
+    flex-direction: row;                 /* Place items side by side (row) */
+    gap: 50px;                           /* Space between photo and text */
+    max-width: 800px;                    /* Limit header width */
+    margin: 100px auto 50px auto;        /* Top margin for spacing, auto centers horizontally */
 }
 
 .header-photo img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    width: 300px;                        /* Fixed image width */
+    height: auto;                        /* Keep image proportions */
+    border-radius: 10px;                 /* Rounded image corners */
+    transition: transform 0.3s ease;     /* Smooth zoom animation on hover */
 }
 
 .header-photo img:hover {
-  transform: scale(1.1); 
+    transform: scale(1.1);               /* Zoom effect when hovering over photo */
 }
 
 .header-text {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-    max-width: 400px;
+    flex-direction: column;              /* Arrange text vertically */
+    align-items: center;                 /* Center text horizontally */
+    justify-content: space-between;      /* Distribute content with space in between */
+    font-size: 16px;                     /* Base font size */
+    max-width: 400px;                    /* Prevent text from stretching too wide */
 }
 
 .header-text p {
-    border: 2px solid red;
-    background-color: red;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
+    border: 2px solid red;               /* Red border */
+    background-color: red;               /* Red background */
+    padding: 10px;                       /* Inner spacing */
+    border-radius: 5px;                  /* Rounded corners */
+    color: white;                        /* White text */
 }
 
 .header-description {
-    font-size: 20x;
-    line-height: 1.5;
-    max-width: 400px;
+    font-size: 20px;                     /* Description text size */
+    line-height: 1.5;                    /* Line spacing */
+    max-width: 400px;                    /* Limit text width */
     display: block;
-    text-align: center;
+    text-align: center;                  /* Center align description text */
 }
 
 .header-description h2 {
-    font-size: 25px;
+    font-size: 25px;                     /* Heading size */
     display: block;
-    text-align: center;
-    max-width: 400px;
+    text-align: center;                  /* Center align heading */
+    max-width: 400px;                    /* Keep heading aligned with description */
 }

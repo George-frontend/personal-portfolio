@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
+    <link rel="stylesheet" href="styles/conatcts.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
   </head>
 
   <body>
@@ -26,7 +29,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header>
+    <header id="header">
       <div class="header-photo">
         <img src="images/me.jpg" alt="personal photo" />
       </div>
@@ -63,8 +66,98 @@
         on challenges and applying what I learn to create user-friendly and
         responsive web applications.
       </p>
+    </section>
 
-      <div id="contacts">
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <ul class="list-skills">
+        <li>
+          <div class="skill-item">
+            <img src="images/html5.svg" alt="HTML" class="skill-icon">
+            <span class="skill-name">HTML</span>
+
+            <div class="skill-bar">
+              <div class="skill-level" data-width="90%"></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="skill-item">
+            <img src="images/css3.svg" alt="CSS3" class="skill-icon">
+            <span class="skill-name">CSS</span>
+
+            <div class="skill-bar">
+              <div class="skill-level" data-width="90%">
+                <span class="skill-percent">0%</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="skill-item">
+            <img src="images/javascript.svg" alt="JavaScript" class="skill-icon">
+            <span class="skill-name">JavaScript</span>
+
+            <div class="skill-bar">
+              <div class="skill-level" data-width="90%">
+                <span class="skill-percent">0%</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="skill-item">
+            <img src="images/react.svg" alt="React" class="skill-icon">
+            <span class="skill-name">REACT</span>
+
+            <div class="skill-bar">
+              <div class="skill-level" data-width="90%">
+                <span class="skill-percent">0%</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="skill-item">
+            <img src="images/git.svg" alt="Git" class="skill-icon">
+            <span class="skill-name">GIT</span>
+
+            <div class="skill-bar">
+              <div class="skill-level" data-width="90%">
+                <span class="skill-percent">0%</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="skill-item">
+            <img src="images/github.svg" alt="GitHub" class="skill-icon github">
+            <span class="skill-name">GitHub</span>
+
+            <div class="skill-bar">
+              <div class="skill-level" data-width="90%">
+                <span class="skill-percent">0%</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <h3>Here can see my projects</h3>
+    </section>
+
+    <div id="contacts">
         <div class="contact-row">
           <div>👤 George Gulubov</div>
           <div>
@@ -86,59 +179,12 @@
           <button id="cv">Download CV</button>
         </div>
       </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>
-          <span class="skill-name">HTML</span>
-          <div class="skill-bar">
-            <div class="skill-level"></div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-name">CSS</span>
-          <div class="skill-bar">
-            <div class="skill-level"></div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-name">JavaScript</span>
-          <div class="skill-bar">
-            <div class="skill-level"></div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-name">React</span>
-          <div class="skill-bar">
-            <div class="skill-level"></div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-name">Git</span>
-          <div class="skill-bar">
-            <div class="skill-level"></div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-name">GitHub</span>
-          <div class="skill-bar">
-            <div class="skill-level"></div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-      <h3>Here can see my projects</h3>
-    </section>
 
     <!-- FOOTER SECTION -->
     <footer id="footer">
       <p>© 2025 George Gulubov. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/app.js"></script>
   </body>
 </html>

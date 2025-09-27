@@ -1,92 +1,23 @@
+/* ================= ABOUT ================= */
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 60px;
+    display: flex;                       /* Use flexbox for layout */
+    flex-direction: column;              /* Stack elements vertically */
+    align-items: center;                 /* Center elements horizontally */
+    justify-content: flex-start;         /* Align content to the top */
+    margin: 50px auto;                   /* Vertical spacing + center section horizontally */
+    padding: 20px;                       /* Small inner spacing inside the box */
+    margin-bottom: 7cm;                  /* Large bottom margin (probably too big for web) */
 }
 
 #about h2 {
-    font-size: 25px;
+    font-size: 25px;                     /* Section title font size */
+    margin-bottom: 20px;                 /* Space between title and paragraph */
 }
 
 #about .paragraph-description {
-    max-width: 700px;
-    line-height: 1,5;
-    font-size: 20px;
-    display: block;
-    align-items: center;
-    gap: 10px;
-}
-
-#contacts {
-  border: 0px solid;
-  border-radius: 7px;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  background-color: black;
-  margin-top: 40px;
-}
-
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 40px;               /* равномерно разстояние */
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  color: black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-row a {
-  color: #0077b5;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-row a:hover {
-  text-decoration: underline;
-}
-
-.contact-row:hover {
-  transform: translateY(-3px) scale(1.0);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  background: #ffffff;
-}
-
-.actions {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-.actions button {
-  background-color: black;
-  color: white;
-  font-size: 25px;
-  border-radius: 8px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 6px red;    /* shadow */
-}
-
-.actions button:hover {
-  background-color: red; /* small changes on hover */
-  box-shadow: 0 6px 10px red; /* strong shadow */
-}
-
-.actions button:active {
-  transform: scale(0.95); /* low "reduction" */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* smaller shadow as if pressed */
+    max-width: 700px;                    /* Prevent text from stretching too wide */
+    line-height: 1.5;                    /* Line height for readability */
+    font-size: 20px;                     /* Paragraph font size */
+    text-align: center;                  /* Center align the text */
+    margin: 0;                           /* Remove default paragraph margin */
 }

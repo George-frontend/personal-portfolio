@@ -1,0 +1,70 @@
+/* ================= CONTACTS ================= */
+#contacts {
+    border-radius: 7px;              /* Rounded corners for the whole section */
+    padding: 20px;                   /* Inner spacing */
+    max-width: 600px;                /* Maximum width of the section */
+    margin: 50px auto;               /* Center horizontally with vertical spacing */
+    display: flex;                   /* Flexbox layout */
+    flex-direction: column;          /* Stack items vertically */
+    gap: 40px;                       /* Space between child elements */
+    background-color: black;         /* Background color */
+}
+
+.contact-row {
+    display: flex;                   /* Flex layout for each contact row */
+    align-items: center;             /* Center items vertically */
+    gap: 40px;                       /* Space between icon/text */
+    padding: 10px 15px;              /* Inner spacing inside each row */
+    margin-bottom: 10px;             /* Space below each row */
+    background: white;               /* Background for the row */
+    border-radius: 8px;              /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow */
+    font-family: Arial, sans-serif;  /* Font styling */
+    font-size: 20px;                 /* Text size */
+    color: black;                    /* Text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.contact-row a {
+    color: #0077b5;                  /* Link color (LinkedIn blue style) */
+    text-decoration: none;           /* Remove underline */
+    font-weight: 500;                /* Semi-bold link */
+}
+
+.contact-row a:hover {
+    text-decoration: underline;      /* Underline link on hover */
+}
+
+.contact-row:hover {
+    transform: translateY(-3px) scale(1.0); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+    background: #ffffff;             /* Keep background solid white */
+}
+
+.actions {
+    display: flex;                   /* Flexbox layout for action buttons */
+    gap: 30px;                       /* Space between buttons */
+    justify-content: center;         /* Center buttons horizontally */
+}
+
+.actions button {
+    background-color: black;         /* Button background */
+    color: white;                    /* Button text */
+    font-size: 25px;                 /* Button font size */
+    border-radius: 8px;              /* Rounded corners */
+    padding: 10px 20px;              /* Inner padding */
+    border: none;                    /* No border */
+    cursor: pointer;                 /* Pointer cursor on hover */
+    transition: all 0.2s ease;       /* Smooth hover/active effect */
+    box-shadow: 0 4px 6px red;       /* Initial shadow */
+}
+
+.actions button:hover {
+    background-color: red;           /* Red background on hover */
+    box-shadow: 0 6px 10px red;      /* Stronger red shadow */
+}
+
+.actions button:active {
+    transform: scale(0.95);          /* Shrinks a little on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Smaller shadow */
+}

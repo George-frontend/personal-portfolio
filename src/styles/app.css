@@ -1,10 +1,51 @@
-body {
-    background-color: black;
-    color: white;
-}
-
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;   /* Smooth scrolling when clicking on anchor links */
 }
 
+body {
+    background-color: black;   /* Page background color */
+    color: white;              /* Default text color */
+}
 
+/* ================= SECTIONS ================= */
+/* Add scroll padding to account for fixed navbar */
+section, header {
+    scroll-margin-top: 80px;   /* Prevent section titles from hiding behind navbar */
+}
+
+/* ================= SECTIONS FULL HEIGHT ================= */
+header, #projects {
+    min-height: 80vh;          /* Section takes up at least 80% of viewport height */
+    scroll-margin-top: 80px;   /* Adjust for fixed navbar */
+    display: flex;             /* Use flexbox for layout */
+    flex-direction: column;    /* Arrange content vertically */
+    justify-content: center;   /* Center content vertically */
+    align-items: center;       /* Center content horizontally */
+}
+
+#skills, #about {
+    min-height: 55vh;          /* Sections take up at least 55% of viewport height */
+    scroll-margin-top: 100px;  /* Extra spacing for navbar overlap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Center content vertically */
+    align-items: center;       /* Center content horizontally */
+}
+
+#contacts {
+    min-height: 60vh;          /* Section takes up at least 60% of viewport height */
+    scroll-margin-top: 100px;  /* Extra spacing for navbar overlap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Center content vertically */
+    align-items: center;       /* Center content horizontally */
+}
+
+/* Remove unnecessary extra margin */
+header {
+    margin: 0;
+}
+
+#about, #skills, #contacts, #projects {
+    margin: 0 auto;            /* Center section horizontally */
+}
