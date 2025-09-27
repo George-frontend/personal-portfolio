@@ -1,7 +1,7 @@
 /* ================= CONTACTS ================= */
 #contacts {
     border-radius: 7px;              /* Rounded corners for the whole section */
-    padding: 20px;                   /* Inner spacing */
+    padding: 40px;                   /* Inner spacing */
     max-width: 600px;                /* Maximum width of the section */
     margin: 50px auto;               /* Center horizontally with vertical spacing */
     display: flex;                   /* Flexbox layout */
@@ -13,20 +13,20 @@
 .contact-row {
     display: flex;                   /* Flex layout for each contact row */
     align-items: center;             /* Center items vertically */
-    gap: 40px;                       /* Space between icon/text */
+    gap: 40px;                       /* Space between items */
     padding: 10px 15px;              /* Inner spacing inside each row */
     margin-bottom: 10px;             /* Space below each row */
-    background: white;               /* Background for the row */
+    background: white;               /* Background color for the row */
     border-radius: 8px;              /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow */
     font-family: Arial, sans-serif;  /* Font styling */
     font-size: 20px;                 /* Text size */
     color: black;                    /* Text color */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
 }
 
 .contact-row a {
-    color: #0077b5;                  /* Link color (LinkedIn blue style) */
+    color: #0077b5;                  /* LinkedIn blue color for links */
     text-decoration: none;           /* Remove underline */
     font-weight: 500;                /* Semi-bold link */
 }
@@ -42,29 +42,102 @@
 }
 
 .actions {
-    display: flex;                   /* Flexbox layout for action buttons */
+    display: flex;                   /* Flexbox layout for buttons */
     gap: 30px;                       /* Space between buttons */
     justify-content: center;         /* Center buttons horizontally */
+    margin-top: 20px;                /* Space above buttons */
 }
 
 .actions button {
     background-color: black;         /* Button background */
-    color: white;                    /* Button text */
-    font-size: 25px;                 /* Button font size */
+    color: white;                    /* Button text color */
+    font-size: 25px;                 /* Button text size */
     border-radius: 8px;              /* Rounded corners */
     padding: 10px 20px;              /* Inner padding */
-    border: none;                    /* No border */
-    cursor: pointer;                 /* Pointer cursor on hover */
+    border: none;                    /* Remove border */
+    cursor: pointer;                 /* Show pointer on hover */
     transition: all 0.2s ease;       /* Smooth hover/active effect */
     box-shadow: 0 4px 6px red;       /* Initial shadow */
 }
 
 .actions button:hover {
     background-color: red;           /* Red background on hover */
-    box-shadow: 0 6px 10px red;      /* Stronger red shadow */
+    box-shadow: 0 6px 10px red;      /* Stronger red shadow on hover */
 }
 
 .actions button:active {
-    transform: scale(0.95);          /* Shrinks a little on click */
+    transform: scale(0.95);          /* Slight shrink on click */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Smaller shadow */
+}
+
+.names {
+    display: flex;                   /* Flexbox for name inputs */
+    flex-direction: row;             /* Arrange inputs horizontally */
+    align-items: center;             /* Center inputs vertically */
+    list-style: none;                /* Remove default list styling */
+    gap: 15px;                       /* Space between inputs */
+    margin-bottom: 25px;             /* Space below the name section */
+}
+
+.names input {
+    font-size: 16px;                 /* Text size */
+    border: 2px solid white;         /* White border */
+    border-radius: 8px;              /* Rounded corners */
+    background-color: black;         /* Background color */
+    padding: 10px 15px;              /* Inner spacing */
+    color: white;                    /* Text color */
+}
+
+.email {
+    text-align: center;              /* Center the email input */
+}
+
+.email input {
+    font-size: 16px;                 /* Text size */
+    border: 2px solid white;         /* White border */
+    border-radius: 8px;              /* Rounded corners */
+    background-color: black;         /* Background color */
+    padding: 10px 15px;              /* Inner spacing */
+    color: white;                    /* Text color */
+}
+
+.description textarea {
+    display: flex;                   /* Flexible box layout */
+    align-items: center;             /* Align text inside vertically */
+    margin-top: 20px;                /* Space above */
+    width: 100%;                     /* Take full width */
+    max-width: 500px;                /* Limit width */
+    height: 120px;                   /* Set fixed height */
+    padding: 10px;                   /* Inner spacing */
+    font-size: 16px;                 /* Text size */
+    border: 2px solid white;         /* White border */
+    border-radius: 8px;              /* Rounded corners */
+    background-color: black;         /* Background color */
+    color: white;                    /* Text color */
+    resize: vertical;                /* Allow vertical resizing */
+}
+
+/* ================= TOAST MESSAGE ================= */
+#toast {
+  visibility: hidden;                /* Hidden by default */
+  min-width: 250px;                  /* Minimum width */
+  margin-left: -125px;               /* Center horizontally */
+  background-color: #2ecc71;         /* Green background for success */
+  color: white;                      /* Text color */
+  text-align: center;                /* Centered text */
+  border-radius: 8px;                /* Rounded corners */
+  padding: 16px;                     /* Inner spacing */
+  position: fixed;                   /* Fixed position on screen */
+  z-index: 9999;                     /* Stay above everything */
+  left: 50%;                         /* Center horizontally */
+  bottom: 30px;                      /* Position above bottom */
+  font-size: 14px;                   /* Text size */
+  opacity: 0;                        /* Start invisible */
+  transition: opacity 0.5s, bottom 0.5s; /* Smooth animation */
+}
+
+#toast.show {
+  visibility: visible;               /* Make visible */
+  opacity: 1;                        /* Fade in */
+  bottom: 50px;                      /* Move up slightly */
 }

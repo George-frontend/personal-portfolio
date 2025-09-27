@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/skills.css" />
     <link rel="stylesheet" href="styles/conatcts.css" />
     <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
   </head>
 
   <body>
@@ -154,16 +155,34 @@
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
-      <h3>Here can see my projects</h3>
+      <h2>My Projects</h2>
+
+      <div class="projects-container1">
+          <div class="project-card p1">
+            <h3>Personal Portfolio Website</h3>
+
+            <div class="image-slider">
+              <img src="project1-images/picture1.png" alt="Screenshot 1">
+              <img src="project1-images/picture2.png" alt="Screenshot 2">
+              <img src="project1-images/picture3.png" alt="Screenshot 3">
+            </div>
+          </div>
+
+        <div class="project-card">None</div>
+        <div class="project-card">None</div>
+      </div>
+
+      <div class="projects-container2">
+        <div class="project-card">None</div>
+        <div class="project-card">None</div>
+        <div class="project-card">None</div>
+      </div>
     </section>
 
     <div id="contacts">
         <div class="contact-row">
           <div>👤 George Gulubov</div>
-          <div>
-            ✉️
-            <a href="mailto:gulubovgeorge@gmail.com">gulubovgeorge@gmail.com</a>
-          </div>
+          <div> ✉️ gulubovgeorge@gmail.com</div>
         </div>
 
         <div class="contact-row">
@@ -174,17 +193,36 @@
           </div>
         </div>
 
-        <div class="actions">
-          <button id="contact-me">Contact Me</button>
-          <button id="cv">Download CV</button>
-        </div>
-      </div>
+        <form id="contact-form">
+          <ul class="names">
+            <li><input type="text" name="from_name" placeholder="First Name" required></li>
+            <li><input type="text" name="last_name" placeholder="Last Name" required></li>
+          </ul>
+
+          <div class="email">
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+
+          <div class="description">
+            <textarea name="message" placeholder="Description" required></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" id="contact-me">Send</button>
+            <button type="button" id="cv">Download CV</button>
+          </div>
+        </form>
 
     <!-- FOOTER SECTION -->
     <footer id="footer">
       <p>© 2025 George Gulubov. All rights reserved.</p>
     </footer>
+    
+    <div id="toast"></div>
 
-    <script src="scripts/app.js"></script>
+    <script src="scripts/slide.js"></script>
+    <script src="scripts/bars.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="scripts/contact.js"></script>
   </body>
 </html>

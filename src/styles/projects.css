@@ -1,0 +1,79 @@
+#projects {
+    display: flex;                   /* Use flexbox layout */
+    flex-direction: column;          /* Arrange children vertically */
+    width: 90%;                      /* Responsive width */
+    max-width: 1200px;               /* Limit maximum width */
+    margin: 50px auto;               /* Center horizontally with vertical spacing */
+    text-align: center;              /* Center text */
+    margin-top: 150px;               /* Extra spacing from top */
+}
+
+.projects-container1,
+.projects-container2 {
+    display: flex;                   /* Flex layout for project rows */
+    justify-content: center;         /* Center project cards horizontally */
+    gap: 60px;                       /* Space between project cards */
+    margin-top: 20px;                /* Space above the row */
+}
+
+.projects-container2 {
+    margin-top: 40px;                /* Larger spacing for the second row */
+}
+
+.project-card {
+    background-color: black;         /* Card background */
+    border: 2px solid white;         /* White border */
+    border-radius: 10px;             /* Rounded corners */
+    width: 340px;                    /* Fixed card width */
+    min-height: 220px;               /* Minimum height */
+    display: flex;                   /* Flexbox for content alignment */
+    flex-direction: column;          /* Stack content vertically */
+    align-items: center;             /* Center horizontally */
+    justify-content: flex-start;     /* Align content to the top */
+    padding: 10px;                   /* Inner spacing */
+    color: white;                    /* Text color */
+    font-weight: bold;               /* Bold text */
+    font-size: 16px;                 /* Base text size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+    overflow: hidden;                /* Hide overflowing content */
+}
+
+.project-card h3 {
+    margin: 5px 0;                   /* Small vertical spacing */
+    font-size: 16px;                 /* Title font size */
+}
+
+.project-card:hover {
+    transform: scale(1.05);          /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
+}
+
+.image-slider {
+    width: 100%;                     /* Full width inside card */
+    height: 210px;                   /* Fixed height */
+    overflow: hidden;                 /* Hide overflowing images */
+    position: relative;               /* Allow positioning of child images */
+    border-radius: 8px;               /* Rounded corners for slider */
+    margin-top: 10px;                 /* Spacing from text */
+}
+
+.image-slider img {
+    width: 100%;                     /* Full width */
+    height: 100%;                    /* Full height */
+    object-fit: cover;                /* Maintain aspect ratio, cover area */
+    position: absolute;               /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+    opacity: 0;                       /* Hidden by default */
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+    z-index: 1;                       /* Behind the active image */
+}
+
+.image-slider img.active {
+    opacity: 1;                       /* Show active image */
+    z-index: 2;                       /* Place on top */
+}
+
+.project-card.p1 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background for special card */
+}

@@ -8,9 +8,10 @@
     display: flex;                  /* Flexbox layout */
     flex-direction: column;         /* Stack items vertically */
     align-items: center;            /* Center items horizontally */
-    padding: 0 10px 0px 10px;       /* Horizontal padding only (no top padding) */
+    padding: 0 10px 50px 10px;       /* Horizontal padding only (no top padding) */
     gap: 10px;                      /* Space between child elements */
     height: auto;                   /* Height adjusts to content */
+    margin-bottom: 20px;
 }
 
 #skills h2 {
