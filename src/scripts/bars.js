@@ -24,3 +24,16 @@ skillLevels.forEach(level => {
     }
   }, 20); // Speed of animation (smaller = faster)
 });
+
+
+// Images animations 
+
+const skillsSection = document.getElementById('skills');
+
+window.addEventListener('scroll', () => {
+  const rect = skillsSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    skillsSection.classList.add('visible');
+  }
+});
+

@@ -1,79 +1,114 @@
+/* ================= PROJECTS SECTION ================= */
 #projects {
-    display: flex;                   /* Use flexbox layout */
-    flex-direction: column;          /* Arrange children vertically */
-    width: 90%;                      /* Responsive width */
-    max-width: 1200px;               /* Limit maximum width */
-    margin: 50px auto;               /* Center horizontally with vertical spacing */
-    text-align: center;              /* Center text */
-    margin-top: 150px;               /* Extra spacing from top */
+    display: flex;
+    flex-direction: column;        /* Stack title and cards vertically */
+    align-items: center;           /* Center content horizontally */
+    width: 90%;
+    max-width: 1200px;             /* Limit width on large screens */
+    margin: 150px auto 80px auto;  /* Top and bottom spacing */
+    text-align: center;            
 }
 
-.projects-container1,
-.projects-container2 {
-    display: flex;                   /* Flex layout for project rows */
-    justify-content: center;         /* Center project cards horizontally */
-    gap: 60px;                       /* Space between project cards */
-    margin-top: 20px;                /* Space above the row */
+/* Grid container for all project cards */
+.projects-container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;                             /* Space between cards */
+    justify-content: center;               /* Center the grid horizontally */
+    align-items: start;                     /* Align rows to top */
+    width: 100%;                          
+    max-width: 1200px;                    
 }
 
-.projects-container2 {
-    margin-top: 40px;                /* Larger spacing for the second row */
-}
-
+/* ================= INDIVIDUAL PROJECT CARD ================= */
 .project-card {
-    background-color: black;         /* Card background */
-    border: 2px solid white;         /* White border */
-    border-radius: 10px;             /* Rounded corners */
-    width: 340px;                    /* Fixed card width */
-    min-height: 220px;               /* Minimum height */
-    display: flex;                   /* Flexbox for content alignment */
-    flex-direction: column;          /* Stack content vertically */
-    align-items: center;             /* Center horizontally */
-    justify-content: flex-start;     /* Align content to the top */
-    padding: 10px;                   /* Inner spacing */
-    color: white;                    /* Text color */
-    font-weight: bold;               /* Bold text */
-    font-size: 16px;                 /* Base text size */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
-    overflow: hidden;                /* Hide overflowing content */
+    width: 300px;      
+    height: 240px;     
+    background-color: #7FB3F2;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    position: relative;               /* Required for absolute positioning of title and link */
+    overflow: hidden;                 /* Hide overflowing content */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: flex-start; 
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    padding: 0;                       /* Remove padding to let title/link overlay slider */
 }
 
-.project-card h3 {
-    margin: 5px 0;                   /* Small vertical spacing */
-    font-size: 16px;                 /* Title font size */
-}
-
-.project-card:hover {
-    transform: scale(1.05);          /* Slight zoom effect */
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
-}
-
+/* ================= IMAGE SLIDER ================= */
 .image-slider {
-    width: 100%;                     /* Full width inside card */
-    height: 210px;                   /* Fixed height */
-    overflow: hidden;                 /* Hide overflowing images */
-    position: relative;               /* Allow positioning of child images */
-    border-radius: 8px;               /* Rounded corners for slider */
-    margin-top: 10px;                 /* Spacing from text */
+    width: 100%;
+    height: 100%;                     /* Fill the card */
+    position: relative;
+    overflow: hidden;       
 }
 
 .image-slider img {
-    width: 100%;                     /* Full width */
-    height: 100%;                    /* Full height */
-    object-fit: cover;                /* Maintain aspect ratio, cover area */
-    position: absolute;               /* Stack images on top of each other */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                 /* Maintain aspect ratio, cover whole slider */
+    position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;                       /* Hidden by default */
-    transition: opacity 1s ease-in-out; /* Smooth fade transition */
-    z-index: 1;                       /* Behind the active image */
+    opacity: 0;                        
+    transition: opacity 1s ease-in-out; 
+    z-index: 1;                        
 }
 
 .image-slider img.active {
-    opacity: 1;                       /* Show active image */
-    z-index: 2;                       /* Place on top */
+    opacity: 1;                       
+    z-index: 2;                       
 }
 
-.project-card.p1 {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background for special card */
+/* ================= CARD TITLE ================= */
+.project-card h3 {
+    position: absolute;      /* Place title over slider */
+    top: 10px;               /* Small gap from top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;             /* Above slider images */
+    margin: 0;               /* Remove default margin */
+    /* No background, no padding, just plain text */
+    color: #ffffff;          /* Keep text white or choose another color */
+    font-weight: bold;
+    font-size: 16px;         /* Adjust size as needed */
+}
+
+/* ================= PROJECT LINK ================= */
+.project-card a {
+    position: absolute;               
+    top: 50%;                         /* Center vertically */
+    left: 50%;                        
+    transform: translate(-50%, -50%) scale(1);  /* Center and reset scale */
+    z-index: 10;                      
+    background-color: rgba(0,0,0,0.5);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;         /* Animate background, color, and scale */
+}
+
+.project-card a:hover {
+    background-color: #5F93ED;
+    color: #ffffff;
+    transform: translate(-50%, -50%) scale(1.1); /* Slight scale up on hover */
+}
+
+.project-card a:active {
+    transform: translate(-50%, -50%) scale(0.95); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ================= CARD HOVER EFFECT ================= */
+.project-card:hover {
+    transform: scale(1.05);            /* Slightly enlarge card on hover */
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
 }

@@ -6,11 +6,11 @@
 
     position: fixed;               /* Keep navbar fixed at the top while scrolling */
     top: 0;                        /* Position at the very top of the page */
-    left: 45%;                     /* Start positioning slightly from the left */
+    left: 49%;                     /* Start positioning slightly from the left */
     transform: translateX(-50%);   /* Adjust horizontally to be visually centered */
     width: 100%;                   /* Navbar takes the full width of viewport */
-    height: 80px;                  /* Fixed height for navbar */
-    background-color: black;       /* Black background */
+    height: 70px;                  /* Fixed height for navbar */
+    background-color: #7FB3F2;       /* Black background */
     z-index: 1000;                 /* Keep navbar above other elements */
 }
 
@@ -22,13 +22,13 @@
 
 .navbar .nav-links li a {
     font-size: 25px;               /* Font size of the links */
-    color: white;                  /* Default text color */
+    color: #FFFFFF;                  /* Default text color */
     text-decoration: none;         /* Remove underline */
     font-weight: 500;              /* Semi-bold font weight */
     transition: color 0.3s;        /* Smooth color change on hover */
 }
 
 .navbar .nav-links li a:hover {
-    color: red;                    /* Change link color on hover */
+    color: #5F93ED;                    /* Change link color on hover */
     text-decoration: underline;    /* Add underline on hover */
 }

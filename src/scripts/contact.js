@@ -31,3 +31,14 @@ form.addEventListener('submit', function(e) {
       showToast('Oops! Something went wrong. Please try again later.', true); // Error toast
     });
 });
+
+// Contact section animations
+
+const contacts = document.getElementById('contacts');
+
+window.addEventListener('scroll', () => {
+  const rect = contacts.getBoundingClientRect();
+  if(rect.top < window.innerHeight - 100){
+    contacts.classList.add('visible');
+  }
+});

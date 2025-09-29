@@ -1,7 +1,9 @@
 #footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    word-spacing: 4px;
-    font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-spacing: 4px;
+  font-size: 20px;
+  background-color: #7FB3F2;   /* Pastel blue background */
+  color: #ffffff;               /* White text */
 }

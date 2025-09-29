@@ -29,11 +29,17 @@ header {
 }
 
 .header-text p {
-    border: 2px solid red;               /* Red border */
-    background-color: red;               /* Red background */
+    border: 2px solid #7FB3F2;               /* Red border */
+    background-color: #7FB3F2;               /* Red background */
     padding: 10px;                       /* Inner spacing */
     border-radius: 5px;                  /* Rounded corners */
-    color: white;                        /* White text */
+    color: #ffffff;                        /* White text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-text p:hover {
+    transform: translateY(-3px);         /* Малко повдигане при hover */
+    box-shadow: 0 6px 15px rgba(127, 179, 242, 0.4); /* Меко сияние */
 }
 
 .header-description {
@@ -45,8 +51,30 @@ header {
 }
 
 .header-description h2 {
-    font-size: 25px;                     /* Heading size */
+    font-size: 20px;                     /* Heading size */
     display: block;
     text-align: center;                  /* Center align heading */
     max-width: 400px;                    /* Keep heading aligned with description */
+
+    overflow: hidden;              /* Hide overflowing text */
+    white-space: nowrap;           /* Keep text in one line */
+    border-right: 2px solid #5F93ED; /* Cursor */
+    animation: typing 3s steps(40, end), blink 0.90s step-end infinite;
+}
+
+/* Animation for typing */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #5F93ED; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

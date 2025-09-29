@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="styles/conatcts.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/projects.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
   </head>
 
   <body>
@@ -24,9 +23,9 @@
       <ul class="nav-links">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#contacts">Contact Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#contacts">Contact Me</a></li>
       </ul>
     </nav>
 
@@ -77,7 +76,7 @@
       <ul class="list-skills">
         <li>
           <div class="skill-item">
-            <img src="images/html5.svg" alt="HTML" class="skill-icon">
+            <img src="images/icons/html5.svg" alt="HTML" class="skill-icon" />
             <span class="skill-name">HTML</span>
 
             <div class="skill-bar">
@@ -90,7 +89,7 @@
 
         <li>
           <div class="skill-item">
-            <img src="images/css3.svg" alt="CSS3" class="skill-icon">
+            <img src="images/icons/css3.svg" alt="CSS3" class="skill-icon" />
             <span class="skill-name">CSS</span>
 
             <div class="skill-bar">
@@ -103,7 +102,11 @@
 
         <li>
           <div class="skill-item">
-            <img src="images/javascript.svg" alt="JavaScript" class="skill-icon">
+            <img
+              src="images/icons/javascript.svg"
+              alt="JavaScript"
+              class="skill-icon"
+            />
             <span class="skill-name">JavaScript</span>
 
             <div class="skill-bar">
@@ -116,7 +119,7 @@
 
         <li>
           <div class="skill-item">
-            <img src="images/react.svg" alt="React" class="skill-icon">
+            <img src="images/icons/react.svg" alt="React" class="skill-icon" />
             <span class="skill-name">REACT</span>
 
             <div class="skill-bar">
@@ -129,7 +132,7 @@
 
         <li>
           <div class="skill-item">
-            <img src="images/git.svg" alt="Git" class="skill-icon">
+            <img src="images/icons/git.svg" alt="Git" class="skill-icon" />
             <span class="skill-name">GIT</span>
 
             <div class="skill-bar">
@@ -142,7 +145,11 @@
 
         <li>
           <div class="skill-item">
-            <img src="images/github.svg" alt="GitHub" class="skill-icon github">
+            <img
+              src="images/icons/github.svg"
+              alt="GitHub"
+              class="skill-icon github"
+            />
             <span class="skill-name">GitHub</span>
 
             <div class="skill-bar">
@@ -152,7 +159,6 @@
             </div>
           </div>
         </li>
-
       </ul>
     </section>
 
@@ -161,68 +167,115 @@
       <h2>My Projects</h2>
 
       <div class="projects-container1">
-          <div class="project-card p1">
-            <h3>Personal Portfolio Website</h3>
+        <div class="project-card p1">
+          <h3>Personal Portfolio Website</h3>
 
-            <div class="image-slider">
-              <img src="project1-images/picture1.png" alt="Screenshot 1">
-              <img src="project1-images/picture2.png" alt="Screenshot 2">
-              <img src="project1-images/picture3.png" alt="Screenshot 3">
-            </div>
+          <a href="">View Project</a>
+
+          <div class="image-slider">
+            <img src="project1-images/picture1.png" alt="Screenshot 1" class="active" />
+            <img src="project1-images/picture2.png" alt="Screenshot 2" />
+            <img src="project1-images/picture3.png" alt="Screenshot 3" />
           </div>
+        </div>
 
-        <div class="project-card">None</div>
-        <div class="project-card">None</div>
-      </div>
+        <div class="project-card p2">
+          <h3>None</h3>
 
-      <div class="projects-container2">
-        <div class="project-card">None</div>
-        <div class="project-card">None</div>
-        <div class="project-card">None</div>
+          <a href="">View Project</a>
+        </div>
+
+        <div class="project-card p3">
+          <h3>None</h3>
+
+          <a href="">View Project</a>
+        </div>
+
+        <div class="project-card p4">
+          <h3>None</h3>
+
+          <a href="">View Project</a>
+        </div>
+
+        <div class="project-card p5">
+          <h3>None</h3>
+
+          <a href="">View Project</a>
+        </div>
+
+        <div class="project-card p6">
+          <h3>None</h3>
+
+          <a href="">View Project</a>
+        </div>
       </div>
     </section>
 
     <div id="contacts">
-        <div class="contact-row">
-          <div>👤 George Gulubov</div>
-          <div> ✉️ gulubovgeorge@gmail.com</div>
+      <div class="contact-row">
+        <div>👤 George Gulubov</div>
+        <div>✉️ gulubovgeorge@gmail.com</div>
+      </div>
+
+      <div class="contact-row">
+        <div>📞 +359 89 848 2930</div>
+        <div>
+          🔗
+          <a
+            href="https://www.linkedin.com/in/george-gulubov-415466332/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+
+      <form id="contact-form">
+        <ul class="names">
+          <li>
+            <input
+              type="text"
+              name="from_name"
+              placeholder="First Name"
+              required
+            />
+          </li>
+          <li>
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              required
+            />
+          </li>
+        </ul>
+
+        <div class="email">
+          <input type="email" name="email" placeholder="Email" required />
         </div>
 
-        <div class="contact-row">
-          <div>📞 +359 89 848 2930</div>
-          <div>
-            🔗
-            <a href="https://www.linkedin.com/in/george-gulubov-415466332/" target="_blank">LinkedIn</a>
-          </div>
+        <div class="description">
+          <textarea
+            name="message"
+            placeholder="Description"
+            required
+          ></textarea>
         </div>
 
-        <form id="contact-form">
-          <ul class="names">
-            <li><input type="text" name="from_name" placeholder="First Name" required></li>
-            <li><input type="text" name="last_name" placeholder="Last Name" required></li>
-          </ul>
+        <div class="actions">
+          <button type="submit" id="contact-me">Send</button>
+          <a href="files/MyCV.pdf" id="cv" download>Download CV</a>
+        </div>
+      </form>
+    </div>
 
-          <div class="email">
-            <input type="email" name="email" placeholder="Email" required>
-          </div>
-
-          <div class="description">
-            <textarea name="message" placeholder="Description" required></textarea>
-          </div>
-
-          <div class="actions">
-            <button type="submit" id="contact-me">Send</button>
-            <button type="button" id="cv">Download CV</button>
-          </div>
-        </form>
+    <div id="toast"></div>
 
     <!-- FOOTER SECTION -->
     <footer id="footer">
       <p>© 2025 George Gulubov. All rights reserved.</p>
     </footer>
-    
-    <div id="toast"></div>
 
+    <script src="scripts/aboutAnimation.js"></script>
     <script src="scripts/slide.js"></script>
     <script src="scripts/bars.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
