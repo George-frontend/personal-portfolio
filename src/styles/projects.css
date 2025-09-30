@@ -1,4 +1,3 @@
-/* ================= PROJECTS SECTION ================= */
 #projects {
     display: flex;
     flex-direction: column;        /* Stack title and cards vertically */
@@ -9,7 +8,6 @@
     text-align: center;            
 }
 
-/* Grid container for all project cards */
 .projects-container1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
@@ -20,12 +18,11 @@
     max-width: 1200px;                    
 }
 
-/* ================= INDIVIDUAL PROJECT CARD ================= */
 .project-card {
     width: 300px;      
     height: 240px;     
-    background-color: #7FB3F2;
-    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    border: 2px solid #7FB3F2;
     border-radius: 10px;
     position: relative;               /* Required for absolute positioning of title and link */
     overflow: hidden;                 /* Hide overflowing content */
@@ -40,7 +37,6 @@
     padding: 0;                       /* Remove padding to let title/link overlay slider */
 }
 
-/* ================= IMAGE SLIDER ================= */
 .image-slider {
     width: 100%;
     height: 100%;                     /* Fill the card */
@@ -51,7 +47,9 @@
 .image-slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover;                 /* Maintain aspect ratio, cover whole slider */
+    /* object-fit: cover; */
+    object-fit: contain;
+    background: linear-gradient(180deg, #eaf3ff 0%, #cbe0fa 100%); 
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +63,6 @@
     z-index: 2;                       
 }
 
-/* ================= CARD TITLE ================= */
 .project-card h3 {
     position: absolute;      /* Place title over slider */
     top: 10px;               /* Small gap from top */
@@ -74,12 +71,11 @@
     z-index: 10;             /* Above slider images */
     margin: 0;               /* Remove default margin */
     /* No background, no padding, just plain text */
-    color: #ffffff;          /* Keep text white or choose another color */
-    font-weight: bold;
+    color: #111111;          /* Keep text white or choose another color */
+    font-weight: 400;
     font-size: 16px;         /* Adjust size as needed */
 }
 
-/* ================= PROJECT LINK ================= */
 .project-card a {
     position: absolute;               
     top: 50%;                         /* Center vertically */
@@ -107,7 +103,6 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* ================= CARD HOVER EFFECT ================= */
 .project-card:hover {
     transform: scale(1.05);            /* Slightly enlarge card on hover */
     box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
