@@ -1,78 +1,98 @@
-/* ================= CONTACTS ================= */
-#contacts {
-    border-radius: 7px;              /* Rounded corners for the whole section */
-    padding: 40px;                   /* Inner spacing */
-    max-width: 600px;                /* Maximum width of the section */
-    margin: 90px auto;               /* Center horizontally with vertical spacing */
-    display: flex;                   /* Flexbox layout */
-    flex-direction: column;          /* Stack items vertically */
-    gap: 40px;                       /* Space between child elements */
-    background-color: #7FB3F2;         /* Background color */
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
 }
 
-.contact-row {
-    display: flex;                   /* Flex layout for each contact row */
-    align-items: center;             /* Center items vertically */
-    gap: 40px;                       /* Space between items */
-    padding: 10px 15px;              /* Inner spacing inside each row */
-    margin-bottom: 10px;             /* Space below each row */
-    background: white;               /* Background color for the row */
-    border-radius: 8px;              /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow */
-    font-family: Arial, sans-serif;  /* Font styling */
-    font-size: 20px;                 /* Text size */
-    color: black;                    /* Text color */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
 }
 
-.contact-row a {
-    color: #0077b5;                  /* LinkedIn blue color for links */
-    text-decoration: none;           /* Remove underline */
-    font-weight: 500;                /* Semi-bold link */
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
 }
 
-.contact-row a:hover {
-    text-decoration: underline;      /* Underline link on hover */
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
 }
 
-.contact-row:hover {
-    transform: translateY(-3px) scale(1.0); /* Slight lift effect */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Stronger shadow on hover */
-    background: #ffffff;             /* Keep background solid white */
-}
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1440px) {
+  #contacts {
+    border-radius: 7px; 
+    padding: 40px; 
+    max-width: 600px; 
+    margin: 90px auto; 
+    display: flex;
+    flex-direction: column; 
+    gap: 40px; 
+    background-color: #7fb3f2; 
+  }
 
-.actions {
-    display: flex;                   /* Flexbox layout for buttons */
-    gap: 30px;                       /* Space between buttons */
-    justify-content: center;         /* Center buttons horizontally */
-    margin-top: 20px;                /* Space above buttons */
-}
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-.actions button {
-    background-color: #ffffff;         /* Button background */
-    color: #111111;                    /* Button text color */
-    font-size: 25px;                   /* Button text size */
-    border-radius: 8px;                /* Rounded corners */
-    padding: 10px 20px;                /* Inner padding */
-    border: none;                      /* Remove border */
-    cursor: pointer;                   /* Show pointer on hover */
-    transition: all 0.3s ease;         /* Smooth animation for hover */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-}
+  .contact-row a {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: 500;
+  }
 
-.actions button:hover {
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);   /* Stronger shadow */
-    background-color: #5F93ED;                /* Optional: pastel blue on hover */
-    color: #ffffff;                            /* Optional: white text on hover */
-}
+  .contact-row a:hover {
+    text-decoration: underline;
+  }
 
-/* Click effect */
-.actions button:active {
-    transform: translateY(0px) scale(0.98);   /* Slight press down */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);    /* Shadow returns to normal */
-}
+  .contact-row:hover {
+    transform: translateY(-3px) scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+  }
 
-.actions a#cv {
+  .actions {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .actions button {
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 25px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .actions button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #5f93ed;
+    color: #ffffff;
+  }
+
+  .actions button:active {
+    transform: translateY(0px) scale(0.98);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .actions a#cv {
     display: inline-block;
     background-color: #ffffff;
     color: #111111;
@@ -82,137 +102,144 @@
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-.actions a#cv:hover {
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-    background-color: #5F93ED;
+  .actions a#cv:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #5f93ed;
     color: #ffffff;
-}
+  }
 
-.actions a#cv:active {
+  .actions a#cv:active {
     transform: translateY(0px) scale(0.98);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
+  .names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
 
-.names {
-    display: flex;                   /* Flexbox for name inputs */
-    flex-direction: row;             /* Arrange inputs horizontally */
-    align-items: center;             /* Center inputs vertically */
-    list-style: none;                /* Remove default list styling */
-    gap: 15px;                       /* Space between inputs */
-    margin-bottom: 25px;             /* Space below the name section */
-}
+  .names input {
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #111111;
+  }
 
-.names input {
-    font-size: 16px;                 /* Text size */
-    background-color: #ffffff;         /* Background color */
-    border: 2px solid #ffffff;         /* White border */
-    border-radius: 8px;              /* Rounded corners */
-    padding: 10px 15px;              /* Inner spacing */
-    color: #111111;                    /* Text color */
-}
+  .email {
+    text-align: center;
+  }
 
-.email {
-    text-align: center;              /* Center the email input */
-}
+  .email input {
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    color: #111111;
+  }
 
-.email input {
-    font-size: 16px;                 /* Text size */
-    border: 2px solid #ffffff;         /* White border */
-    border-radius: 8px;              /* Rounded corners */
-    background-color: #ffffff;         /* Background color */
-    padding: 10px 15px;              /* Inner spacing */
-    color: #111111;                    /* Text color */
-}
+  .description textarea {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #111111;
+    resize: vertical;
+  }
 
-.description textarea {
-    display: flex;                   /* Flexible box layout */
-    align-items: center;             /* Align text inside vertically */
-    margin-top: 20px;                /* Space above */
-    width: 100%;                     /* Take full width */
-    max-width: 500px;                /* Limit width */
-    height: 120px;                   /* Set fixed height */
-    padding: 10px;                   /* Inner spacing */
-    font-size: 16px;                 /* Text size */
-    border: 2px solid #ffffff;         /* White border */
-    border-radius: 8px;              /* Rounded corners */
-    background-color: #ffffff;         /* Background color */
-    color: #111111;                    /* Text color */
-    resize: vertical;                /* Allow vertical resizing */
-}
+  #toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #62c257;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(-20px);
+  }
 
-/* ================= TOAST MESSAGE ================= */
-#toast {
-  visibility: hidden;                /* Hidden by default */
-  min-width: 250px;                  /* Minimum width */
-  background-color: #62c257;         /* Green background for success */
-  color: #ffffff;                      /* Text color */
-  text-align: center;                /* Centered text */
-  border-radius: 8px;                /* Rounded corners */
-  padding: 16px;                     /* Inner spacing */
-  position: fixed;                   /* Fixed position on screen */
-  z-index: 9999;                     /* Stay above everything */
-  top: 20px;                         /* Distance from top */
-  right: 20px;                       /* Distance from right */
-  font-size: 14px;                   /* Text size */
-  opacity: 0;                        /* Start invisible */
-  transition: opacity 0.5s, transform 0.5s; /* Smooth fade + slide */
-  transform: translateY(-20px);      /* Start slightly higher */
-}
+  #toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-#toast.show {
-  visibility: visible;               /* Make visible */
-  opacity: 1;                        /* Fade in */
-  transform: translateY(0);          /* Slide down into view */
-}
-
-/* ========== Contacts Animation ========== */
-
-#contacts .contact-row {
+  #contacts .contact-row {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
-}
+  }
 
-#contacts.visible .contact-row {
+  #contacts.visible .contact-row {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 
-#contacts .contact-row:hover {
+  #contacts .contact-row:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
 
-#contacts .contact-row div:first-child,
-#contacts .contact-row div a {
+  #contacts .contact-row div:first-child,
+  #contacts .contact-row div a {
     transition: transform 0.3s ease, color 0.3s ease;
-}
+  }
 
-#contacts .contact-row div:first-child:hover,
-#contacts .contact-row div a:hover {
+  #contacts .contact-row div:first-child:hover,
+  #contacts .contact-row div a:hover {
     transform: scale(1.1);
-    color: #5F93ED;
-}
+    color: #5f93ed;
+  }
 
-#contacts::before {
-    content: '';
+  #contacts::before {
+    content: "";
     position: absolute;
     top: -30%;
     left: -30%;
     width: 160%;
     height: 160%;
-    background: radial-gradient(circle, rgba(127,179,242,0.1) 0%, transparent 80%);
+    background: radial-gradient(
+      circle,
+      rgba(127, 179, 242, 0.1) 0%,
+      transparent 80%
+    );
     animation: floatContacts 20s linear infinite;
     pointer-events: none;
     z-index: 0;
-}
+  }
 
-@keyframes floatContacts {
-    0% { transform: translate(0,0); }
-    50% { transform: translate(30px, 30px); }
-    100% { transform: translate(0,0); }
+  @keyframes floatContacts {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(30px, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 }

@@ -1,131 +1,145 @@
-/* ================= SKILLS ================= */
-#skills {
-    width: 800px;                   /* Fixed width for the skills container */
-    max-width: 90%;                 /* Makes it responsive on smaller screens */
-    background-color: #7FB3F2;        /* Background color of the skills box */
-    border: 2px solid #ffffff;        /* White border around the box */
-    border-radius: 10px;            /* Rounded corners */
-    display: flex;                  /* Flexbox layout */
-    flex-direction: column;         /* Stack items vertically */
-    align-items: center;            /* Center items horizontally */
-    padding: 0 10px 50px 10px;       /* Horizontal padding only (no top padding) */
-    gap: 10px;                      /* Space between child elements */
-    height: auto;                   /* Height adjusts to content */
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
+}
+
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
+}
+
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1440px) {
+  #skills {
+    width: 800px;
+    max-width: 90%;
+    background-color: #7fb3f2;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 50px 10px;
+    gap: 10px;
+    height: auto;
     margin-bottom: 20px;
-}
+  }
 
-#skills h2 {
-    color: #ffffff;                   /* Title color */
-    font-size: 22px;                /* Title font size */
-    text-align: center;             /* Center align the title */
-    margin: 0;                      /* Remove default margin */
-    padding-top: 0;                 /* No extra space above */
-    line-height: 1;                 /* Compact line spacing */
-}
+  #skills h2 {
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    padding-top: 0;
+    line-height: 1;
+  }
 
+  .list-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    list-style: none;
+  }
 
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-/* ================= Skills List ================= */
-.list-skills {
-    display: flex;                  /* Flexbox for the skill list */
-    flex-direction: column;         /* Stack skill items vertically */
-    gap: 8px;                       /* Small gap between each skill item */
-    width: 100%;                    /* Take full width of the container */
-    list-style: none;               /* Remove default list bullets */
-}
-
-/* Each individual skill item */
-.skill-item {
-    display: flex;                  /* Flexbox for icon, text, and bar */
-    align-items: center;            /* Align items vertically centered */
-    gap: 10px;                      /* Space between icon, text, and bar */
-}
-
-/* Skill icons */
-.skill-icon {
-    width: 35px;                    /* Icon size */
+  .skill-icon {
+    width: 35px;
     height: 35px;
-    object-fit: contain;            /* Keep image aspect ratio */
-}
+    object-fit: contain;
+  }
 
-.skill-icon.github {
-    filter: invert(100%);           /* Invert GitHub icon for dark mode */
-}
+  .skill-icon.github {
+    filter: invert(100%);
+  }
 
-/* Skill name text */
-.skill-name {
-    width: 120px;                   /* Fixed width for skill name */
-    color: #ffffff;                   /* Text color */
-    font-weight: 500;               /* Semi-bold */
-    text-align: left;               /* Align text to the left */
-}
+  .skill-name {
+    width: 120px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: left;
+  }
 
-/* Skill bar container */
-.skill-bar {
-    width: 100%;                    /* Take remaining available space */
-    max-width: 450px;               /* Prevent it from getting too wide */
-    height: 16px;                   /* Bar height */
-    background-color: #ffffff;        /* Bar background */
-    border-radius: 6px;             /* Rounded corners */
-    overflow: hidden;               /* Hide overflow of the level bar */
-    margin-left: auto;              /* Center horizontally */
+  .skill-bar {
+    width: 100%;
+    max-width: 450px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: auto;
     margin-right: auto;
-}
+  }
 
-/* Actual progress fill */
-.skill-level {
-    width: 0%;                      /* Animated width (to be set dynamically) */
-    height: 100%;                   /* Fill skill-bar height */
+  .skill-level {
+    width: 0%;
+    height: 100%;
     background: linear-gradient(90deg, #62c257);
-    border-radius: 6px;             /* Rounded progress */
-    display: flex;                  
-    align-items: center;            /* Center text vertically */
-    justify-content: flex-end;      /* Place percentage text at the end */
-    padding-right: 5px;             /* Space between number and edge */
-    color: #ffffff;                   /* Text color */
-    font-weight: bold;              /* Bold percentage text */
-    font-size: 12px;                /* Font size for percentage */
-    transition: width 1.5s ease-in-out; /* Smooth animation when filling */
-    position: relative;             /* Needed for wave overlay */
-    overflow: hidden;               /* Hide wave overflow */
-}
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
 
-/* Percentage text inside the bar */
-.skill-percent {
-    color: #ffffff;                   /* Percentage color */
-    font-size: 12px;                /* Percentage font size */
-}
+  .skill-percent {
+    color: #ffffff;
+    font-size: 12px;
+  }
 
-/* ================= Wave Animation Overlay ================= */
-
-/* Pseudo-element for wave effect */
-.skill-level::before {
-    content: '';                      /* Empty content */
-    position: absolute;               /* Absolute inside skill-level */
+  .skill-level::before {
+    content: "";
+    position: absolute;
     top: 0;
-    left: -100%;                      /* Start off-screen left */
-    width: 100%;                      /* Full width */
-    height: 100%;                     /* Full height of skill bar */
-    background: rgba(255,255,255,0.3); /* Semi-transparent white wave */
-    transform: skewX(-20deg);         /* Angled wave look */
-    animation: wave 6s linear infinite; /* Continuous movement */
-    border-radius: 6px;               /* Match bar rounding */
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    animation: wave 6s linear infinite;
+    border-radius: 6px;
+  }
+
+  @keyframes wave {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  #skills.visible .skill-icon {
+    animation: rotate360 5s linear infinite;
+  }
+
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
 }
-
-/* Keyframes for moving wave left to right */
-@keyframes wave {
-    0% { left: -100%; }               /* Start off-screen left */
-    100% { left: 100%; }              /* Move fully to right */
-}
-
-/* ================= Skills Icon Rotation ================= */
-#skills.visible .skill-icon {
-    animation: rotate360 5s linear infinite; /* 360° rotation loop */
-}
-
-@keyframes rotate360 {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-

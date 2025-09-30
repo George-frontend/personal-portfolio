@@ -1,51 +1,76 @@
-html {
-    scroll-behavior: smooth;   /* Smooth scrolling when clicking on anchor links */
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
 }
 
-body {
-    background-color: #F8FAFC;   /* Page background color */
-    color: #111111;              /* Default text color */
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
 }
 
-/* ================= SECTIONS ================= */
-/* Add scroll padding to account for fixed navbar */
-section, header {
-    scroll-margin-top: 80px;   /* Prevent section titles from hiding behind navbar */
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
 }
 
-/* ================= SECTIONS FULL HEIGHT ================= */
-header, #projects {
-    min-height: 80vh;          /* Section takes up at least 80% of viewport height */
-    scroll-margin-top: 80px;   /* Adjust for fixed navbar */
-    display: flex;             /* Use flexbox for layout */
-    flex-direction: column;    /* Arrange content vertically */
-    justify-content: center;   /* Center content vertically */
-    align-items: center;       /* Center content horizontally */
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
 }
 
-#skills, #about {
-    min-height: 55vh;          /* Sections take up at least 55% of viewport height */
-    scroll-margin-top: 100px;  /* Extra spacing for navbar overlap */
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1440px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #111111;
+  }
+
+  section,
+  header {
+    scroll-margin-top: 80px;
+  }
+
+  header,
+  #projects {
+    min-height: 80vh;
+    scroll-margin-top: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* Center content vertically */
-    align-items: center;       /* Center content horizontally */
-}
+    justify-content: center;
+    align-items: center;
+  }
 
-#contacts {
-    min-height: 60vh;          /* Section takes up at least 60% of viewport height */
-    scroll-margin-top: 100px;  /* Extra spacing for navbar overlap */
+  #skills,
+  #about {
+    min-height: 55vh;
+    scroll-margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* Center content vertically */
-    align-items: center;       /* Center content horizontally */
-}
+    justify-content: center;
+    align-items: center;
+  }
 
-/* Remove unnecessary extra margin */
-header {
+  #contacts {
+    min-height: 60vh;
+    scroll-margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
     margin: 0;
-}
+  }
 
-#about, #skills, #contacts, #projects {
-    margin: 0 auto;            /* Center section horizontally */
+  #about,
+  #skills,
+  #contacts,
+  #projects {
+    margin: 0 auto;
+  } 
 }

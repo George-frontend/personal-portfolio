@@ -1,34 +1,56 @@
-.navbar {
-    display: flex;                 /* Use flexbox layout for horizontal alignment */
-    justify-content: flex-end;     /* Push navigation links to the right side */
-    align-items: center;           /* Vertically center items inside navbar */
-    padding: 10px 20px;            /* Inner spacing for top/bottom and left/right */
-
-    position: fixed;               /* Keep navbar fixed at the top while scrolling */
-    top: 0;                        /* Position at the very top of the page */
-    left: 49%;                     /* Start positioning slightly from the left */
-    transform: translateX(-50%);   /* Adjust horizontally to be visually centered */
-    width: 100%;                   /* Navbar takes the full width of viewport */
-    height: 70px;                  /* Fixed height for navbar */
-    background-color: #7FB3F2;       /* Black background */
-    z-index: 1000;                 /* Keep navbar above other elements */
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
 }
 
-.navbar .nav-links {
-    list-style: none;              /* Remove default bullet points */
-    display: flex;                 /* Arrange links horizontally */
-    gap: 20px;                     /* Space between each link */
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
 }
 
-.navbar .nav-links li a {
-    font-size: 25px;               /* Font size of the links */
-    color: #FFFFFF;                  /* Default text color */
-    text-decoration: none;         /* Remove underline */
-    font-weight: 500;              /* Semi-bold font weight */
-    transition: color 0.3s;        /* Smooth color change on hover */
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
 }
 
-.navbar .nav-links li a:hover {
-    color: #5F93ED;                    /* Change link color on hover */
-    text-decoration: underline;    /* Add underline on hover */
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1440px) {
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 70px;
+    background-color: #7fb3f2;
+    z-index: 1000;
+  }
+
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  .navbar .nav-links li a {
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .navbar .nav-links li a:hover {
+    color: #5f93ed;
+    text-decoration: underline;
+  }
 }

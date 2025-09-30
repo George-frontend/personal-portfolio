@@ -1,80 +1,208 @@
-/* ================= HEADER ================= */
-header {
-    display: flex;                       /* Use flexbox for layout */
-    align-items: center;                 /* Vertically align content */
-    flex-direction: row;                 /* Place items side by side (row) */
-    gap: 50px;                           /* Space between photo and text */
-    max-width: 800px;                    /* Limit header width */
-    margin: 100px auto 50px auto;        /* Top margin for spacing, auto centers horizontally */
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
 }
 
-.header-photo img {
-    width: 300px;                        /* Fixed image width */
-    height: auto;                        /* Keep image proportions */
-    border-radius: 10px;                 /* Rounded image corners */
-    transition: transform 0.3s ease;     /* Smooth zoom animation on hover */
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
 }
 
-.header-photo img:hover {
-    transform: scale(1.1);               /* Zoom effect when hovering over photo */
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
 }
 
-.header-text {
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
+}
+
+/* ================= LARGE DESKTOP ================= */
+/*@media (min-width: 1440px) {
+  header {
     display: flex;
-    flex-direction: column;              /* Arrange text vertically */
-    align-items: center;                 /* Center text horizontally */
-    justify-content: space-between;      /* Distribute content with space in between */
-    font-size: 16px;                     /* Base font size */
-    max-width: 400px;                    /* Prevent text from stretching too wide */
-}
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    max-width: 800px;
+    margin: 100px auto 50px auto;
+  }
 
-.header-text p {
-    border: 2px solid #7FB3F2;               /* Red border */
-    background-color: #7FB3F2;               /* Red background */
-    padding: 10px;                       /* Inner spacing */
-    border-radius: 5px;                  /* Rounded corners */
-    color: #ffffff;                        /* White text */
+  .header-photo img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .header-photo img:hover {
+    transform: scale(1.1);
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    max-width: 400px;
+  }
+
+  .header-text p {
+    border: 2px solid #7fb3f2;
+    background-color: #7fb3f2;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  }
 
-.header-text p:hover {
-    transform: translateY(-3px);         /* Малко повдигане при hover */
-    box-shadow: 0 6px 15px rgba(127, 179, 242, 0.4); /* Меко сияние */
-}
+  .header-text p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(127, 179, 242, 0.4);
+  }
 
-.header-description {
-    font-size: 20px;                     /* Description text size */
-    line-height: 1.5;                    /* Line spacing */
-    max-width: 400px;                    /* Limit text width */
+  .header-description {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 400px;
     display: block;
-    text-align: center;                  /* Center align description text */
-}
+    text-align: center;
+  }
 
-.header-description h2 {
-    font-size: 20px;                     /* Heading size */
+  .header-description h2 {
+    font-size: 20px;
     display: block;
-    text-align: center;                  /* Center align heading */
-    max-width: 400px;                    /* Keep heading aligned with description */
+    text-align: center;
+    max-width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #5f93ed;
+    animation: typing 3s steps(40, end), blink 0.9s step-end infinite;
+  }
 
-    overflow: hidden;              /* Hide overflowing text */
-    white-space: nowrap;           /* Keep text in one line */
-    border-right: 2px solid #5F93ED; /* Cursor */
-    animation: typing 3s steps(40, end), blink 0.90s step-end infinite;
-}
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
-/* Animation for typing */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
+  @keyframes blink {
+    0%,
+    100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #5f93ed;
+    }
+  }
 
-/* Blinking cursor */
-@keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #5F93ED; }
-}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+} */
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+@media (min-width: 1440px) {
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    max-width: 800px;
+    margin: 100px auto 50px auto;
+  }
+
+  .header-photo img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .header-photo img:hover {
+    transform: scale(1.1);
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    max-width: 400px;
+  }
+
+  .header-text p {
+    border: 2px solid #7fb3f2;
+    background-color: #7fb3f2;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .header-text p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(127, 179, 242, 0.4);
+  }
+
+  .header-description {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 400px;
+    display: block;
+    text-align: center;
+  }
+
+  .header-description h2 {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    max-width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #5f93ed;
+    animation: typing 3s steps(40, end), blink 0.9s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #5f93ed;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

@@ -1,85 +1,109 @@
-@media (max-width: 640px) {
-  
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
 }
 
-
-/* ================= ABOUT ================= */
-#about {
-    display: flex;                       /* Use flexbox for layout */
-    flex-direction: column;              /* Stack elements vertically */
-    align-items: center;                 /* Center elements horizontally */
-    justify-content: flex-start;         /* Align content to the top */
-    margin: 50px auto;                   /* Vertical spacing + center section horizontally */
-    padding: 20px;                       /* Small inner spacing inside the box */
-    margin-bottom: 7cm;                  /* Large bottom margin (probably too big for web) */
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
 }
 
-#about h2 {
-    font-size: 25px;                     /* Section title font size */
-    margin-bottom: 20px;                 /* Space between title and paragraph */
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
 }
 
-#about .paragraph-description {
-    max-width: 700px;                    /* Prevent text from stretching too wide */
-    line-height: 1.5;                    /* Line height for readability */
-    font-size: 20px;                     /* Paragraph font size */
-    text-align: center;                  /* Center align the text */
-    margin: 0;                           /* Remove default paragraph margin */
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
 }
 
-/* ========== About Me Animation ========== */
-#about h2, #about .paragraph-description {
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1440px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px auto;
+    padding: 20px;
+    margin-bottom: 7cm;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #about h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  #about .paragraph-description {
+    max-width: 700px;
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+  }
+
+  #about h2,
+  #about .paragraph-description {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-out;
-}
+  }
 
-#about.visible h2,
-#about.visible .paragraph-description {
+  #about.visible h2,
+  #about.visible .paragraph-description {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 
-#about .paragraph-description strong {
+  #about .paragraph-description strong {
     position: relative;
     cursor: default;
-}
+  }
 
-#about .paragraph-description strong::after {
-    content: '';
+  #about .paragraph-description strong::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
     width: 0%;
     height: 2px;
-    background: #5F93ED;
+    background: #5f93ed;
     transition: width 0.5s ease;
-}
+  }
 
-#about .paragraph-description strong:hover::after {
+  #about .paragraph-description strong:hover::after {
     width: 100%;
-}
+  }
 
-#about {
-    position: relative;
-    overflow: hidden;
-}
-
-#about::before {
-    content: '';
+  #about::before {
+    content: "";
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(127,179,242,0.15) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(127, 179, 242, 0.15) 0%,
+      transparent 70%
+    );
     animation: float 15s linear infinite;
     pointer-events: none;
     z-index: 0;
-}
+  }
 
-@keyframes float {
-    0% { transform: translate(0,0); }
-    50% { transform: translate(50px, 50px); }
-    100% { transform: translate(0,0); }
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, 50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  } 
 }

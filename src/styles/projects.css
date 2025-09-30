@@ -1,109 +1,130 @@
-#projects {
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 320px) {
+  /* Малки телефони */
+}
+
+/* ================= MOBILE ================= */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* Стандартни мобилни устройства */
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Таблети */
+}
+
+/* ================= LAPTOP / SMALL DESKTOP ================= */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  /* Средни лаптопи / малки десктопи */
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1440px) {
+  #projects {
     display: flex;
-    flex-direction: column;        /* Stack title and cards vertically */
-    align-items: center;           /* Center content horizontally */
+    flex-direction: column;
+    align-items: center;
     width: 90%;
-    max-width: 1200px;             /* Limit width on large screens */
-    margin: 150px auto 80px auto;  /* Top and bottom spacing */
-    text-align: center;            
-}
+    max-width: 1200px;
+    margin: 150px auto 80px auto;
+    text-align: center;
+  }
 
-.projects-container1 {
+  .projects-container1 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 20px;                             /* Space between cards */
-    justify-content: center;               /* Center the grid horizontally */
-    align-items: start;                     /* Align rows to top */
-    width: 100%;                          
-    max-width: 1200px;                    
-}
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    max-width: 1200px;
+  }
 
-.project-card {
-    width: 300px;      
-    height: 240px;     
+  .project-card {
+    width: 300px;
+    height: 240px;
     background-color: #ffffff;
-    border: 2px solid #7FB3F2;
+    border: 2px solid #7fb3f2;
     border-radius: 10px;
-    position: relative;               /* Required for absolute positioning of title and link */
-    overflow: hidden;                 /* Hide overflowing content */
+    position: relative;
+    overflow: hidden;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    justify-content: flex-start; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     color: #ffffff;
     font-weight: bold;
     font-size: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    padding: 0;                       /* Remove padding to let title/link overlay slider */
-}
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+  }
 
-.image-slider {
-    width: 100%;
-    height: 100%;                     /* Fill the card */
-    position: relative;
-    overflow: hidden;       
-}
-
-.image-slider img {
+  .image-slider {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-slider img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    background: linear-gradient(180deg, #eaf3ff 0%, #cbe0fa 100%); 
+    background: linear-gradient(180deg, #eaf3ff 0%, #cbe0fa 100%);
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;                        
-    transition: opacity 1s ease-in-out; 
-    z-index: 1;                        
-}
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+  }
 
-.image-slider img.active {
-    opacity: 1;                       
-    z-index: 2;                       
-}
+  .image-slider img.active {
+    opacity: 1;
+    z-index: 2;
+  }
 
-.project-card h3 {
-    position: absolute;      /* Place title over slider */
-    top: 10px;               /* Small gap from top */
+  .project-card h3 {
+    position: absolute;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;             /* Above slider images */
-    margin: 0;               /* Remove default margin */
-    /* No background, no padding, just plain text */
-    color: #111111;          /* Keep text white or choose another color */
+    z-index: 10;
+    margin: 0;
+    color: #111111;
     font-weight: 400;
-    font-size: 16px;         /* Adjust size as needed */
-}
+    font-size: 16px;
+  }
 
-.project-card a {
-    position: absolute;               
-    top: 50%;                         /* Center vertically */
-    left: 50%;                        
-    transform: translate(-50%, -50%) scale(1);  /* Center and reset scale */
-    z-index: 10;                      
-    background-color: rgba(0,0,0,0.5);
+  .project-card a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 6px 12px;
     border-radius: 6px;
     text-align: center;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;         /* Animate background, color, and scale */
-}
+    transition: all 0.3s ease;
+  }
 
-.project-card a:hover {
-    background-color: #5F93ED;
+  .project-card a:hover {
+    background-color: #5f93ed;
     color: #ffffff;
-    transform: translate(-50%, -50%) scale(1.1); /* Slight scale up on hover */
-}
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
-.project-card a:active {
-    transform: translate(-50%, -50%) scale(0.95); /* Press down effect */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+  .project-card a:active {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
 
-.project-card:hover {
-    transform: scale(1.05);            /* Slightly enlarge card on hover */
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+  } 
 }
