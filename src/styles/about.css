@@ -1,3 +1,8 @@
+@media (max-width: 640px) {
+  
+}
+
+
 /* ================= ABOUT ================= */
 #about {
     display: flex;                       /* Use flexbox for layout */
