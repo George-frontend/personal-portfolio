@@ -1,21 +1,88 @@
 /* ================= SMALL MOBILE ================= */
 @media (max-width: 320px) {
-  /* Малки телефони */
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 70px auto 50px auto; 
+    padding: 15px;
+    width: 95%;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #eaf3ff;
+    box-sizing: border-box;
+  }
+
+  #about h2 {
+    font-size: 14px; 
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease-out;
+  }
+
+  #about .paragraph-description {
+    font-size: 10px;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease-out;
+  }
+
+  #about.visible h2,
+  #about.visible .paragraph-description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #about .paragraph-description strong::after {
+    height: 1.5px;
+  }
+
+  #about::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      rgba(127, 179, 242, 0.15) 0%,
+      transparent 70%
+    );
+    animation: float 15s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(25px, 25px); } 
+    100% { transform: translate(0, 0); }
+  }
 }
 
-/* ================= MOBILE ================= */
+/* ================= STANDART MOBILE ================= */
 @media (min-width: 321px) and (max-width: 767px) {
-  /* Стандартни мобилни устройства */
+
 }
 
 /* ================= TABLET ================= */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Таблети */
+
 }
 
 /* ================= LAPTOP / SMALL DESKTOP ================= */
 @media (min-width: 1025px) and (max-width: 1439px) {
-  /* Средни лаптопи / малки десктопи */
+
 }
 
 /* ================= LARGE DESKTOP ================= */

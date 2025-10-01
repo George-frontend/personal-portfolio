@@ -1,21 +1,85 @@
 /* ================= SMALL MOBILE ================= */
 @media (max-width: 320px) {
-  /* Малки телефони */
+  html,
+  body {
+    overflow-x: hidden; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .header-photo,
+  .header-right {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+
+  .list-skills li {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea,
+  .email,
+  .description {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-/* ================= MOBILE ================= */
+
+
+/* ================= STANDART MOBILE ================= */
 @media (min-width: 321px) and (max-width: 767px) {
-  /* Стандартни мобилни устройства */
+
 }
 
 /* ================= TABLET ================= */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Таблети */
+
 }
 
 /* ================= LAPTOP / SMALL DESKTOP ================= */
 @media (min-width: 1025px) and (max-width: 1439px) {
-  /* Средни лаптопи / малки десктопи */
+
 }
 
 /* ================= LARGE DESKTOP ================= */
@@ -27,6 +91,11 @@
   body {
     background-color: #f8fafc;
     color: #111111;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
   }
 
   section,
@@ -72,5 +141,5 @@
   #contacts,
   #projects {
     margin: 0 auto;
-  } 
+  }
 }
